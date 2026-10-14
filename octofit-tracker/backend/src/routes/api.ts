@@ -21,3 +21,4 @@ apiRouter.get('/leaderboard', async (_request, response, next) => {
 apiRouter.get('/workouts/suggestions/:userEmail', async (request, response, next) => {
   try { response.json({ suggestions: await suggestWorkouts(request.params.userEmail) }); } catch (error) { next(error); }
 });
+ 
